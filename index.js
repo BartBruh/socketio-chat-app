@@ -18,10 +18,15 @@ app.get("/", (req, res) => {
 io.on("connection", (socket) => {
     console.log("a user connected");
     socket.on("disconnect", () => {
-        console.log("user disconnected");
+        console.log("a user disconnected");
+    })
+    
+    socket.on("chat message", (msg) => {
+        console.log("message: " + msg);
+        io.emit("chat message", msg);
     })
 })
 
 server.listen(port, () => {
-    console.log("Server is running on port " + port);
+    console.log("Server is running on port *:" + port);
 })
