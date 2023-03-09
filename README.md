@@ -1,2 +1,2 @@
-# socketio-chat-app
- Simple Chat App using Node.JS, Express and Socket.IO
+# Socket.IO Chat App Basic Implementation
+ Basic Chat App Implementation using Node.JS, Express and Socket.IO

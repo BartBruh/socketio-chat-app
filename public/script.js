@@ -16,5 +16,5 @@ socket.on("chat message", (msg) => {
     let msg_li = document.createElement("li");
     msg_li.textContent = msg;
     messages_ul.appendChild(msg_li);
-    window.scrollTo(0, document.body.scrollHeight);
+    msg_li.scrollIntoView(false);
 })
